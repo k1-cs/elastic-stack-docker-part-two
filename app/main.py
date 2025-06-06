@@ -47,7 +47,7 @@ def init(fastapi_app: FastAPI) -> None:
     async def show():
         with ui.header(elevated=True).style('background-color: #3874c8').classes('items-center justify-between'):
             ui.markdown('### APM DEMO')
-            ui.button(on_click=lambda: right_drawer.toggle(), icon='menu').props('flat color=white')
+            ui.button(on_click=right_drawer.toggle, icon='menu').props('flat color=white')
         with ui.right_drawer(fixed=False).style('background-color: #ebf1fa').props('bordered') as right_drawer:
             ui.chat_message('Hello Elastic Stack User!',
                             name='APM Robot',
